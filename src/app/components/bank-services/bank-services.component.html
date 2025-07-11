@@ -1,0 +1,15 @@
+<section class="flex flex-col justify-between py-4 px-16 bg-grey-600">
+  <div class="flex flex-col items-center md:items-start">
+    <h2 class="text-4xl font-light font-public mb-4 md:text-left text-blue-450 text-center leading-[150%]">Why choose Digitalbank?</h2>
+    <p class="text-lg font-normal text-center md:text-left text-grey-1 w-full md:w-1/2 mb-8">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
+  </div>
+  <div class="flex flex-col md:flex-row md:justify-between">
+    <ng-container *ngFor="let service of services">
+        <div class="flex flex-col justify-between items-center md:items-start">
+            <img class="w-16 mb-4" [src]="service.iconUrl" [alt]="service.title + 'logo'">
+            <h3 class="text-2xl font-light text-center md:text-left mb-4 font-public"> {{ service.title }}</h3>
+            <p class="w-64 text-base text-center md:text-left font-normal leading-[150%] mb-4 font-normal text-grey-1">{{ service.description }}</p>
+        </div>
+    </ng-container>
+  </div>
+</section>
